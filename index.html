@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mobilestyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Dynamic Javascript Form</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="navbarBrand">
+                    <a href="#">tecxhaITResume</a>
+                </div>
+                <div class="navbarToggle">
+                    <i class="bi bi-list"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="content-head">
+            <h1>Resume Generator</h1>
+            <p>Kindly provide your data below</p>
+        </div>
+    </header>
+    <section class="container" style="margin-bottom:50px;">
+    <form action="" method="get" id="processForm">
+        <div class="content-body">
+            <div class="tabs">
+                <ul class="tab-list-group">
+                    <li class="tab-item active" aria-labelledby="personalTab">Personal</li>
+                    <li class="tab-item" aria-labelledby="ProfessionalTab">Professional</li>
+                    <li class="tab-item" aria-labelledby="SkillsTab">Skills</li>
+                    <li class="tab-item" aria-labelledby="ReferencesTab">References</li>
+                    <li class="tab-item" aria-labelledby="TemplatesTab">Templates</li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="personalTab" class="hidden">
+                    <div class="tab-content-item">
+                        <div class="personal-data">
+                            <h2>Personal Information</h2>
+                            <div class="form-group">
+                                <label for="">FullName</label>
+                                <div class="d-flex">
+                                    <div class="form-group"><input type="text" name="" id="firstName" placeholder="first Name" ></div>
+                                    <div class="form-group"><input type="text" name="" id="lastName" placeholder="Surname"></div>
+                                    <div class="form-group"><input type="text" name="" id="otherName" placeholder="Middle Name"></div>
+                                </div>
+                            </div>   
+                            <div class="d-flex">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="" id="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" name="" id="email">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-group">
+                                    <label for="tel">Mobile Number</label>
+                                    <input type="tel" name="" id="tel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">D.O.B</label>
+                                    <input type="date" name="" id="dob">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-group">
+                                    <label for="state">State of Origin</label>
+                                    <input type="text" name="" id="state">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pob">Place of Birth</label>
+                                    <input type="text" name="" id="pob">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lga">L.G.A</label>
+                                    <input type="text" name="" id="lga">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-group">
+                                    <label for="status">Marital Status</label>
+                                    <select name="" id="status">
+                                        <option value="">Choose one</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="religion">Religion</label>
+                                    <select name="" id="religion">
+                                        <option value="">Choose one</option>
+                                        <option value="Christianity">Christianity</option>
+                                        <option value="Islam">Islam</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-group">
+                                    <label for="linkedIn">Linkedin Profile</label>
+                                    <input type="text" name="" id="linkedIn">
+                                </div>
+                                <div class="form-group">
+                                    <label for="social">Twitter/Facebook/Instagram</label>
+                                    <input type="text" name="" id="social">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="job_role">Current Job Role</label>
+                                <input type="text" name="" id="job_role">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ProfessionalTab" class="hidden">
+                    <div class="tab-content-item">
+                        <div class="professional-data">
+                            <h2>Professional Information</h2>
+                            <div class="form-group">
+                                <label for="desc">Add Job Objective</label>
+                                <textarea name="" id="jobObjective" cols="30" rows="10" placeholder="e.g.. Looking for an organisation where i can utilize my skills....Not more than 250 words " ></textarea>
+                            </div>   
+                            <div class="form-group">
+                                <div class="d-flex flex-row">
+                                    <h3 >Add Educational Background</h3>
+                                    <button class="btn" id="eduAddBtn"><span class="icon">&plus;</span> Add Education</button>
+                                </div>
+                                    <div id="edu-field">
+                                        <div class="education-record-field" id="record-0">
+                                            <div class="form-group">
+                                                <label for="edutype">Education Type</label>
+                                                <select name="" id="edutype">
+                                                    <option value="FSLC- First School Leaving Certificate">FSLC (First School Leaving certificate)</option>
+                                                    <option value="SSCE -Senior Secondary School Certificate">SSCE (Senior Secondary School Certificate)</option>
+                                                    <option value="BSc">BSc </option>
+                                                    <option value="HND">HND</option>
+                                                    <option value="ND">ND</option>
+                                                    <option value="Masters">Masters</option>
+                                                    <option value="PHD">PHD</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="instName">Institution Name</label>  
+                                                <input type="text" name="" id="instName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="courseStudy">Course of Study</label>  
+                                                <input type="text" name="" id="courseStudy">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="instAddress">Institution Address</label>
+                                                <input type="text" name="" id="instAddress">
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="form-group">
+                                                    <label for="startDate">Start Date</label>
+                                                    <input type="date" name="" id="startDate">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="endDate">Date of Completion</label>
+                                                    <input type="date" name="" id="endDate">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex flex-row">
+                                    <h3 >Add Job Experiences</h3>
+                                    <button class="btn" id="orgAddBtn"><span class="icon">&plus;</span> Add Experience</button>
+                                </div>
+                                
+                                    <div id="experience-field">
+                                        <div class="experience-record-field" id="record-0">
+                                            <div class="form-group">
+                                                <label for="jobTitle">Job Title/Name</label>  
+                                                <input type="text" name="" id="jobTitle" placeholder="e.g Cleaner, Hr Manager, Computer Operator e.t.c">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="orgName">Organization Name</label>  
+                                                <input type="text" name="" id="orgName">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="orgAddress">Organization Address</label>
+                                                <input type="text" name="" id="orgAddress">
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="form-group">
+                                                    <label for="orgStartDate">Start Date</label>
+                                                    <input type="date" name="" id="orgStartDate">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="orgEndDate">Date of Completion</label>
+                                                    <input type="date" name="" id="orgEndDate">
+                                                </div>
+                                            </div>
+                                            <div class="experience-desc">
+                                                <div class="form-group">
+                                                    <div class="job-desc-field">
+                                                        <input type="text" name="" class="job-desc-item" id="job-desc-item1" placeholder="Job Description e.g- filed payment transaction for customers e.t.c">
+                                                        <input type="text" name="" class="job-desc-item" id="job-desc-item2" placeholder="Job Description e.g- filed payment transaction for customers e.t.c">
+                                                        <input type="text" name="" class="job-desc-item" id="job-desc-item3" placeholder="Job Description e.g- filed payment transaction for customers e.t.c">
+                                                        <input type="text" name="" class="job-desc-item" id ="job-desc-item4" placeholder="Job Description e.g- filed payment transaction for customers e.t.c">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex flex-row">
+                                    <h3>Add Certifications</h3>
+                                    <button class="btn" id="certAddBtn"><span class="icon">&plus;</span> Add certification</button>
+                                </div>
+                                <p>You can add records of your certificates received up till date</p>
+                                <div id="certificate-field">
+                                    <div class="certificate-record" id="record-0">
+                                        <div class="form-group">
+                                            <label for="cert-title">Certificate Title</label>
+                                            <input type="text" name="" id="cert-title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cert-org">Organisation Name & Address</label>
+                                            <input type="text" name="" id="cert-org">
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="form-group">
+                                                <label for="certDate">Certification Date</label>
+                                                <input type="date" name="" id="certDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="SkillsTab" class="hidden">
+                    <div class="tab-content-item">
+                         <div class="skills-data">
+                            <h2>Skill Information</h2>
+                                <div class="form-group">
+                                    <div class="d-flex flex-row">
+                                        <h3>Add Skills</h3>
+                                        <button class="btn" id="skillAddBtn"><span class="icon">&plus;</span> Add Skill</button>
+                                    </div>
+                                    <p>You can add records of skills you have acquired throughout your career years</p>
+                                    <div id="skills-field">
+                                        <label for="skillName">Skill Name</label>
+                                        <div class="skills-record" id="record-0">
+                                            <div class="form-group">
+                                                <input type="text" name="" id="skillName" placeholder="e.g- HTML proficiency, Ability to work under pressure e.t.c">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                        </div>
+                    </div>
+                </div>
+                <div id="ReferencesTab" class="hidden">
+                    <div class="tab-content-item">
+                        <div class="references-data">
+                            <div class="d-flex flex-row">
+                                <h2>References</h2>
+                                <button class="btn" id="refereeAddBtn"><span class="icon">&plus;</span> Add referee</button>
+                            </div>
+                            <p>Your referees goes below</p>
+                            <div id="referee-field">
+                                <div class="referee-record" id="record-0">
+                                    <div class="form-group">
+                                        <label for="refereeName">Name of Referee</label>
+                                        <input type="text" name="" id="refereeName" >
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="form-group">
+                                            <label for="refereeWork">referee Organisation/Work</label>
+                                            <input type="text" name="" id="refereeWork">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="refereeAddress">Address of Referee</label>
+                                            <input type="text" name="" id="refereeAddress" >
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="refereeTel">Mobile Number</label>
+                                        <input type="text" name="" id="refereeTel" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="TemplatesTab" class="hidden">
+                    <div class="tab-content-item">
+                        <form action="js/processform.js" method="get">
+                            <div class="references-data">
+                                <div class="d-flex">
+                                    <h2>Choose a template for your Resume</h2>
+                                </div>
+                                <p>Your templates goes below</p>
+                                <div id="templates-list">
+                                    <div class="template-record">
+                                        <div class="row">
+                                            <div class="template-item-holder">
+                                                <div class="template-item">
+                                                    <div class="template-item-img">
+                                                        <img src="assets/modern_template1.png" alt="">
+                                                    </div>
+                                                    <div class="template-item-content">
+                                                        <h3 class="template-item-content-title">Modern</h3>
+                                                        <p class="template-item-content-desc">simple but intuitive template for young graduates and entry level job applicants</p>
+                                                        <p>Free</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="template-item-holder">
+                                                <div class="template-item">
+                                                    <div class="template-item-img">
+                                                        <img src="assets/pharmacist-cv-example-1.svg" alt="">
+                                                    </div>
+                                                    <div class="template-item-content">
+                                                        <h3 class="template-item-content-title">Modern</h3>
+                                                        <p class="template-item-content-desc">simple but intuitive template for young graduates and entry level job applicants</p>
+                                                        <p>Free</p> 
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-footer">
+                <div class="flex-item d-flex">
+                    <button class="btn" id="applyBtn"><i class="bi bi-bookmark"></i>Save</button>
+                    <button class="btn" id="previewBtn"><i class="bi bi-eye"></i>Preview</button>
+                    <button class="btn" id="printBtn"><i class="bi bi-download"></i>print</button>
+                    <button class="warning btn" id="clearBtn"><i class="bi bi-x-lg"></i>Clear</button>
+                </div>
+        </div>
+    </form>
+    </section>
+    <footer></footer>
+</body>
+<script src="js/script.js"></script>
+<script src="js/processform.js"></script>
+</html>
