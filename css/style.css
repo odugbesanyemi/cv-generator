@@ -4,6 +4,7 @@
     --accentColor: rgb(238, 56, 0);
     --warningColor: orange;
     font-family: sans-serif;
+    print-color-adjust: exact;
 }
 .container{
     padding: 5px 50px;
