@@ -4,9 +4,13 @@
     --accentColor: rgb(238, 56, 0);
     --warningColor: orange;
     font-family: sans-serif;
-
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
 }
-
+*{
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
 .container{
     padding: 5px 50px;
     overflow: hidden !important;
