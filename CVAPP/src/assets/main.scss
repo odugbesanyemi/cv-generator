@@ -1,0 +1,11 @@
+$primary : rgb(217, 255, 0); //#60percent
+$secondary: blue; //30percent
+$accent: yellow; //#10percent
+// Import all of Bootstrap's CSS
+@font-face {
+    font-family:'cabin';
+    src: url(fonts/Cabin-Regular.otf);
+}
+*{
+    font-family: cabin;
+}
