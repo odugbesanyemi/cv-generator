@@ -151,7 +151,7 @@ clearBtn.onclick=(e)=>{
     let clearResponse =  prompt('Are you sure? type Y for yes N for No.')
     if(clearResponse == 'Y'){
         localStorage.clear()
-        window.location.assign('../index.html')
+        window.location.assign('/')
     }else{
         
     }

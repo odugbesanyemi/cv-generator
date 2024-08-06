@@ -11,13 +11,13 @@ h5{
     font-size: 14px !important;
 }
 .template-frame{
-    background-color: ghostwhite;
+    background-color: #f0f0f0;
     min-width: 800px;
 }
 .template-header{
-    background-color: purple;
+    background-color: white;
     min-height: 150px;
-    color: white;
+    color: black;
     padding:0 50px;
 }
 .template-content{
@@ -36,7 +36,7 @@ h5{
     color: rgb(255, 246, 255);
 }
 .template-content .icon{
-    background-color: purple !important;
+    background-color: black !important;
     padding: 4px 8px !important;
 }
 .template-content .icon i{
@@ -50,7 +50,7 @@ td{
     padding:5px 25px;
 }
 thead tr{
-    background-color : purple !important;
+    background-color : black !important;
     color: white;
 }
 table{
